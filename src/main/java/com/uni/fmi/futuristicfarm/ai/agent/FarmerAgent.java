@@ -29,8 +29,9 @@ public class FarmerAgent extends Agent {
     @Override
     protected void setup() {
 
-        farmerAgentGUI = new FarmerAgentGUI(this);
         farmOntology = new FarmOntology();
+        farmerAgentGUI = new FarmerAgentGUI(this, farmOntology.getAllSymptoms());
+
 
         DFAgentDescription dfd = new DFAgentDescription();
         dfd.setName(getAID());
@@ -98,4 +99,7 @@ public class FarmerAgent extends Agent {
         }
     }
 
+    public FarmOntology getFarmOntology() {
+        return farmOntology;
+    }
 }

@@ -7,6 +7,10 @@ import org.apache.jena.query.QueryFactory;
 import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.rdf.model.ResourceFactory;
+import org.apache.jena.update.UpdateAction;
+import org.apache.jena.update.UpdateFactory;
+import org.apache.jena.update.UpdateRequest;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.OWLDataFactory;
 import org.semanticweb.owlapi.model.OWLOntology;
@@ -17,6 +21,9 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -167,4 +174,52 @@ public class FarmOntology {
         return labels;
     }
 
+    public void createSymptom(String symptomName) {
+        String superclassURI = "http://www.semanticweb.org/user/ontologies/2023/5/farm#Symptom";
+        String subclassURI = "http://www.semanticweb.org/user/ontologies/2023/5/farm#" + symptomName;
+        if (!symptomName.toLowerCase().contains("symptom")) {
+            subclassURI = subclassURI + "Symptom";
+        }
+
+        String sparqlQuery = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+                "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n" +
+                "PREFIX owl: <http://www.w3.org/2002/07/owl#>\n" +
+                "INSERT DATA {\n" +
+                "  <" + subclassURI + "> rdf:type owl:Class ;\n" +
+                "                         rdfs:subClassOf <" + superclassURI + "> .\n" +
+                "}";
+
+        UpdateRequest request = UpdateFactory.create(sparqlQuery);
+        UpdateAction.execute(request, model);
+
+        String outputFile = "src/files/farm.owl";
+        try (OutputStream out = new FileOutputStream(outputFile)) {
+            model.write(out, "RDF/XML");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void deleteSymptom(String symptom) {
+
+        String subclassURI = "http://www.semanticweb.org/user/ontologies/2023/5/farm#" + symptom;
+        if (!symptom.toLowerCase().contains("symptom")) {
+            subclassURI = subclassURI + "Symptom";
+        }
+        Resource symptomResource = ResourceFactory.createResource(subclassURI);
+        model.removeAll(symptomResource, null, null);
+
+        String outputFile = "src/files/farm.owl";
+        try (OutputStream out = new FileOutputStream(outputFile)) {
+            model.write(out, "RDF/XML");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void updateSymptom(String newSymptomName, String oldSymptomName) {
+        deleteSymptom(oldSymptomName);
+        createSymptom(newSymptomName);
+    }
 }
