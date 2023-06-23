@@ -1,0 +1,46 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.7'
+	id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'com.uni.fmi'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+	mavenCentral()
+}
+
+ext {
+	set('mapStructVersion',"1.5.3.Final")
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	//implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'org.postgresql:postgresql'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+	implementation group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'
+	implementation "org.mapstruct:mapstruct:$mapStructVersion"
+	annotationProcessor "org.mapstruct:mapstruct-processor:$mapStructVersion"
+	implementation 'org.liquibase:liquibase-core:4.17.2'
+
+	implementation group: 'net.sourceforge.owlapi', name: 'owlapi-distribution', version: '3.5.0'
+	implementation group: 'net.sourceforge.owlapi', name: 'org.semanticweb.hermit', version: '1.4.3.517'
+	implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.15.2'
+	implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.15.1'
+	implementation 'org.apache.jena:jena-core:4.4.0'
+	implementation 'org.apache.jena:jena-arq:4.4.0'
+	implementation files('lib/jade.jar')
+	implementation files('lib/owlapi-distribution-3.5.0-sources.jar')
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

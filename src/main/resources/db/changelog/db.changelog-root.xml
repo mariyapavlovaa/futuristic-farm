@@ -1,0 +1,23 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <include file="classpath:/db/changelog/db.changelog-1.0-create-user-role-table.xml"/>
+    <include file="classpath:/db/changelog/db.changelog-1.1-create-user-table.xml"/>
+    <include file="classpath:/db/changelog/db.changelog-1.2-create-tag-table.xml"/>
+    <include file="classpath:/db/changelog/db.changelog-1.3-create-season-phase-table.xml"/>
+    <include file="classpath:/db/changelog/db.changelog-1.4-create-article-table.xml"/>
+    <include file="classpath:/db/changelog/db.changelog-1.6-create-comment-table.xml"/>
+<!--    <include file="classpath:/db/changelog/db.changelog-1.7-create-crop-table.xml"/>-->
+<!--    <include file="classpath:/db/changelog/db.changelog-1.8-create-soil-table.xml"/>-->
+<!--    <include file="classpath:/db/changelog/db.changelog-1.9-create-plant-table.xml"/>-->
+<!--    <include file="classpath:/db/changelog/db.changelog-2.0-create-sort-table.xml"/>-->
+    <include file="classpath:/db/changelog/db.changelog-2.1-create-symptom-table.xml"/>
+<!--    <include file="classpath:/db/changelog/db.changelog-2.2-create-illness-table.xml"/>-->
+    <include file="classpath:/db/changelog/db.changelog-2.3-create-consultation-table.xml"/>
+    <include file="classpath:/db/changelog/db.changelog-2.4-create-diagnose-table.xml"/>
+
+</databaseChangeLog>

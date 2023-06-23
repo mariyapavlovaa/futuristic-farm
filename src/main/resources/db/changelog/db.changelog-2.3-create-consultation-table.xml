@@ -1,0 +1,58 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="2.4-create-consultation-table" author="Maria Pavlova">
+
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="consultation"/>
+            </not>
+        </preConditions>
+
+        <comment>Create consultation table if it doesn't exist.</comment>
+
+        <createTable tableName="consultation">
+
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="consultation_pkey"/>
+            </column>
+            <column name="plant_name" type="VARCHAR(500)"/>
+            <column name="treatment_description" type="VARCHAR(1000)"/>
+            <column name="picture" type="bytea"/>
+            <column name="is_deleted" type="boolean" defaultValueBoolean="false"/>
+
+        </createTable>
+
+    </changeSet>
+
+    <changeSet id="create consultation_symptom table" author="Maria Pavlova">
+
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="consultation_symptom"/>
+            </not>
+        </preConditions>
+
+        <comment>Create consultation_symptom table if it doesn't exist.</comment>
+
+        <createTable tableName="consultation_symptom">
+
+            <column name="consultation_id" type="BIGINT">
+                <constraints nullable="false" foreignKeyName="consultation_fk"
+                             references="consultation(id)"/>
+            </column>
+
+            <column name="symptom_id" type="BIGINT">
+                <constraints nullable="false" foreignKeyName="symptom_fk"
+                             references="symptom(id)"/>
+            </column>
+
+        </createTable>
+
+    </changeSet>
+
+</databaseChangeLog>

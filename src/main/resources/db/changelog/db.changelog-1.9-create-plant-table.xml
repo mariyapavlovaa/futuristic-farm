@@ -1,0 +1,41 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="2.3-create-plant-table" author="Maria Pavlova">
+
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="plant"/>
+            </not>
+        </preConditions>
+
+        <comment>Create plant table if it doesn't exist.</comment>
+
+        <createTable tableName="plant">
+
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="plant_pkey"/>
+            </column>
+
+            <column name="name" type="VARCHAR(500)"/>
+            <column name="description" type="VARCHAR(500)"/>
+
+            <column name="soil_id" type="BIGINT">
+                <constraints nullable="false" foreignKeyName="soil_fk"
+                             references="soil(id)"/>
+            </column>
+
+            <column name="crop_id" type="BIGINT">
+                <constraints nullable="false" foreignKeyName="crop_fk"
+                             references="crop(id)"/>
+            </column>
+
+            <column name="is_deleted" type="boolean" defaultValueBoolean="false"/>
+        </createTable>
+
+    </changeSet>
+</databaseChangeLog>

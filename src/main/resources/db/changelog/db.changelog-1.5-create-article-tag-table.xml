@@ -1,0 +1,33 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="1.5-create-article-tag-table" author="Maria Pavlova">
+
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="article_tag"/>
+            </not>
+        </preConditions>
+
+        <comment>Create article_tag table if it doesn't exist.</comment>
+
+        <createTable tableName="article_tag">
+
+            <column name="article_id" type="BIGINT">
+                <constraints nullable="false" foreignKeyName="article_tag_fk_article"
+                             references="article(id)"/>
+            </column>
+
+            <column name="tag_id" type="BIGINT">
+                <constraints nullable="false" foreignKeyName="article_tag_fk_tag"
+                             references="tag(id)"/>
+            </column>
+
+        </createTable>
+
+    </changeSet>
+</databaseChangeLog>

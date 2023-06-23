@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+
+  db:
+    restart: always
+    image: postgres:15.1
+    container_name: farm_db
+    environment:
+      - POSTGRES_DB=farm
+      - POSTGRES_USER=futuristicfarm
+      - POSTGRES_PASSWORD=future123
+    ports:
+      - "5434:5432"
+    volumes:
+      - futuristic-farm-data:/var/lib/postgresql/data
+
+volumes:
+  futuristic-farm-data:

@@ -1,0 +1,1739 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2023/5/farm#"
+     xml:base="http://www.semanticweb.org/user/ontologies/2023/5/farm"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">farm</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#hasBacteria -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasBacteria">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#isBacteriaOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Illness"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Bacteria"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#hasIllness -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasIllness">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#isIllnessOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllCrop"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Illness"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#hasSymptom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasSymptom">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#isSymptomOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Illness"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Symptom"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#hasTreatment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasTreatment">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#isTreatmentOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllCrop"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Treatment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#hasTreatmentMethod -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasTreatmentMethod">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#isTreatmentMethodOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Treatment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TreatmentMethod"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#hasVirus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasVirus">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#isVirusOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Illness"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Virus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#isBacteriaOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#isBacteriaOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Bacteria"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Illness"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#isIllnessOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#isIllnessOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Illness"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllCrop"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#isSymptomOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#isSymptomOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Symptom"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Illness"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#isTreatmentMethodOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#isTreatmentMethodOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TreatmentMethod"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Treatment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#isTreatmentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#isTreatmentOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Treatment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllCrop"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#isVirusOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#isVirusOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Virus"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Illness"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#hasRotationTreatmentDurationInMonths -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasRotationTreatmentDurationInMonths"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#AlternariaLinariaeBacteria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#AlternariaLinariaeBacteria">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Bacteria"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#ErisipheCichoracearumBacteria"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#PodosphaeraXanthiiBacteria"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#PseudomonasSyringaePvLachrymansBacteria"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#SeptoriaLycopersiciBacteria"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#AngularLeafSpotIllCucumber -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#AngularLeafSpotIllCucumber">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllCucumber"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasIllness"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberAngularLeafSpotIllnessIllness"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasTreatment"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberAngularLeafSpotTreatment"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllCucumber"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#PowderyMildewIllCucumber"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#Bacteria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#Bacteria">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Pathogen"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Virus"/>
+        <rdfs:label xml:lang="bg">Бактерии</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#BarleyYellowDwarfIllWheat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#BarleyYellowDwarfIllWheat">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllWheat"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasIllness"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#WheatBarleyYellowDwarfIlness"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasTreatment"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#WheatBarleyYellowDwarfTreatment"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllWheat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#BarleyYellowDwarfVirus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#BarleyYellowDwarfVirus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Virus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#BeigeColoredCenterSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#BeigeColoredCenterSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#BigLesionsOnTheFruitSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#BigLesionsOnTheFruitSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#BlackSpecksSporeProducingBodiesSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#BlackSpecksSporeProducingBodiesSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#CentricRingsInBullsEyePatternSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#CentricRingsInBullsEyePatternSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#CerealIllness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#CerealIllness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Illness"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#FruitIllness"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#VegetableIllness"/>
+        <rdfs:label xml:lang="bg">Болест по Зърнено-житни култури</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#ChemicalControlWithFungicideMancozebMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#ChemicalControlWithFungicideMancozebMethod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TreatmentMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#ConcentricRingsOnTheFruitSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#ConcentricRingsOnTheFruitSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#ControllingGrassyWeedsNearWheatFieldsMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#ControllingGrassyWeedsNearWheatFieldsMethod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TreatmentMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#ControllingVolunteerCerealsWithinOrNearWheatFieldsMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#ControllingVolunteerCerealsWithinOrNearWheatFieldsMethod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TreatmentMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#CopperBasedBactericidesMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#CopperBasedBactericidesMethod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TreatmentMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberAngularLeafSpotIllnessIllness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberAngularLeafSpotIllnessIllness">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberIllness"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasBacteria"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#PseudomonasSyringaePvLachrymansBacteria"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#IrregularlyShapedHolesSymptom"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#LeafSpotsDrySymptom"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallAngularBrownOrStrawColoredSpotsWithYellowHaloSymptom"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberIllness"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberPowderyMildewIllness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberAngularLeafSpotTreatment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberAngularLeafSpotTreatment">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#Treatment"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasTreatmentMethod"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#ChemicalControlWithFungicideMancozebMethod"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasTreatmentMethod"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#CopperBasedBactericidesMethod"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasTreatmentMethod"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#DoNotUseOverheadIrrigationMethod"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasTreatmentMethod"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#UseCropRotationMethod"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasRotationTreatmentDurationInMonths"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:cardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberIllness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberIllness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#VegetableIllness"/>
+        <rdfs:label xml:lang="bg">Болест по краставиците</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberPowderyMildewIllness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberPowderyMildewIllness">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberIllness"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasBacteria"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#ErisipheCichoracearumBacteria"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasBacteria"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#PodosphaeraXanthiiBacteria"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#WhitePowderyGrowthSymptom"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberIllness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberPowderyMildewTreatment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberPowderyMildewTreatment">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#Treatment"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasTreatmentMethod"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#ChemicalControlWithFungicideMancozebMethod"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasTreatmentMethod"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#MilkOrganicMethod"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#DoNotUseOverheadIrrigationMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#DoNotUseOverheadIrrigationMethod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TreatmentMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#DomainThing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#DomainThing"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#EarlyBlightIllTomato -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#EarlyBlightIllTomato">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllTomato"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasIllness"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoEarlyBlightIllness"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasTreatment"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoEarlyBlightTreatment"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllTomato"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#SeptoriaLeafSpotIllTomato"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#ErisipheCichoracearumBacteria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#ErisipheCichoracearumBacteria">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Bacteria"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#PodosphaeraXanthiiBacteria"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#PseudomonasSyringaePvLachrymansBacteria"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#SeptoriaLycopersiciBacteria"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#FruitDropsSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#FruitDropsSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#FruitIllness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#FruitIllness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Illness"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#VegetableIllness"/>
+        <rdfs:label xml:lang="bg">Болест по плодовете</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#IllCereal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllCereal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllCrop"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllFruit"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllVegetable"/>
+        <rdfs:label xml:lang="bg">Болни зърнено-житни култури</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#IllCrop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllCrop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#DomainThing"/>
+        <rdfs:label xml:lang="bg">Болен посев</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#IllCucumber -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllCucumber">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllVegetable"/>
+        <rdfs:label xml:lang="bg">Болни краставици</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#IllFruit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllFruit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllCrop"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllVegetable"/>
+        <rdfs:label xml:lang="bg">Болни плодове</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#IllTomato -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllTomato">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllFruit"/>
+        <rdfs:label xml:lang="bg">Болни домати</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#IllVegetable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllVegetable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllCrop"/>
+        <rdfs:label xml:lang="bg">Болни зеленчуци</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#IllWheat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllWheat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllCereal"/>
+        <rdfs:label xml:lang="bg">Болна пшеница</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#Illness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#Illness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#DomainThing"/>
+        <rdfs:label xml:lang="bg">Болест</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#IrregularlyShapedHolesSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#IrregularlyShapedHolesSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#LeafSpotsDrySymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#LeafSpotsDrySymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#MilkOrganicMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#MilkOrganicMethod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TreatmentMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#Pathogen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#Pathogen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#DomainThing"/>
+        <rdfs:label xml:lang="bg">Патоген</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#PodosphaeraXanthiiBacteria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#PodosphaeraXanthiiBacteria">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Bacteria"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#PseudomonasSyringaePvLachrymansBacteria"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#SeptoriaLycopersiciBacteria"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#PowderyMildewIllCucumber -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#PowderyMildewIllCucumber">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllCucumber"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasIllness"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberPowderyMildewIllness"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasTreatment"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberPowderyMildewTreatment"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllCucumber"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#PseudomonasSyringaePvLachrymansBacteria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#PseudomonasSyringaePvLachrymansBacteria">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Bacteria"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#SeptoriaLycopersiciBacteria"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#PurpleОrPinkDiscolorationSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#PurpleОrPinkDiscolorationSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#RepeatedFungicideApplicationsWithChlorothalonilMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#RepeatedFungicideApplicationsWithChlorothalonilMethod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TreatmentMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#SanitationRremovalOfCropDebrisMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#SanitationRremovalOfCropDebrisMethod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TreatmentMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#SeedTreatmentsOfImidaclopridOrThiamethoxamMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#SeedTreatmentsOfImidaclopridOrThiamethoxamMethod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TreatmentMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#SeptoriaLeafSpotIllTomato -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#SeptoriaLeafSpotIllTomato">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllTomato"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasIllness"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoSeptoriaLeafSpotIllnessIllness"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasTreatment"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoSeptoriaLeafSpotTreatment"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllTomato"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#SeptoriaLycopersiciBacteria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#SeptoriaLycopersiciBacteria">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Bacteria"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallAngularBrownOrStrawColoredSpotsWithYellowHaloSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallAngularBrownOrStrawColoredSpotsWithYellowHaloSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallBrownLesionsMostlyOnTheOlderFoliageSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallBrownLesionsMostlyOnTheOlderFoliageSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallCircularSpotsWithDarkBordersSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallCircularSpotsWithDarkBordersSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallPatchesSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallPatchesSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#Symptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#Symptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#DomainThing"/>
+        <rdfs:label xml:lang="bg">Симптом</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoEarlyBlightIllness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoEarlyBlightIllness">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoIllness"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasBacteria"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#AlternariaLinariaeBacteria"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#BigLesionsOnTheFruitSymptom"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#CentricRingsInBullsEyePatternSymptom"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#ConcentricRingsOnTheFruitSymptom"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#FruitDropsSymptom"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallBrownLesionsMostlyOnTheOlderFoliageSymptom"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoIllness"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoSeptoriaLeafSpotIllnessIllness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoEarlyBlightTreatment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoEarlyBlightTreatment">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#Treatment"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasTreatmentMethod"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#ChemicalControlWithFungicideMancozebMethod"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasTreatmentMethod"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TrimOffDisposeInfectedLowerBranchesAndLeavesMethod"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasTreatmentMethod"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#UseCropRotationMethod"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasTreatmentMethod"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#UsePathogenFreeSeedMethod"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasTreatmentMethod"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#UseResistantTolerantCultivarsMethod"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoIllness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoIllness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#FruitIllness"/>
+        <rdfs:label xml:lang="bg">Болест по доматите</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoSeptoriaLeafSpotIllnessIllness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoSeptoriaLeafSpotIllnessIllness">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoIllness"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasBacteria"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#SeptoriaLycopersiciBacteria"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#BeigeColoredCenterSymptom"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#BlackSpecksSporeProducingBodiesSymptom"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallCircularSpotsWithDarkBordersSymptom"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoIllness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoSeptoriaLeafSpotTreatment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoSeptoriaLeafSpotTreatment">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#Treatment"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasTreatmentMethod"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#DoNotUseOverheadIrrigationMethod"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasTreatmentMethod"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#RepeatedFungicideApplicationsWithChlorothalonilMethod"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasTreatmentMethod"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#SanitationRremovalOfCropDebrisMethod"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasTreatmentMethod"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#UseCropRotationMethod"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#Treatment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#Treatment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#DomainThing"/>
+        <rdfs:label xml:lang="bg">Лечение</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#TreatmentMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#TreatmentMethod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#DomainThing"/>
+        <rdfs:label xml:lang="bg">Метод на лечение</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#TrimOffDisposeInfectedLowerBranchesAndLeavesMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#TrimOffDisposeInfectedLowerBranchesAndLeavesMethod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TreatmentMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#UseCropRotationMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#UseCropRotationMethod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TreatmentMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#UsePathogenFreeSeedMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#UsePathogenFreeSeedMethod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TreatmentMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#UseResistantTolerantCultivarsMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#UseResistantTolerantCultivarsMethod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TreatmentMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#VegetableIllness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#VegetableIllness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Illness"/>
+        <rdfs:label xml:lang="bg">Болест по зеленчуците</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#Virus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#Virus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Pathogen"/>
+        <rdfs:label xml:lang="bg">Вируси</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#WheatBarleyYellowDwarfIlness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#WheatBarleyYellowDwarfIlness">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#WheatIllness"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#PurpleОrPinkDiscolorationSymptom"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallPatchesSymptom"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasSymptom"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#YellowDiscolorationSymptom"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasVirus"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#BarleyYellowDwarfVirus"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#WheatIllness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#WheatBarleyYellowDwarfTreatment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#WheatBarleyYellowDwarfTreatment">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#Treatment"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasTreatmentMethod"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#ControllingGrassyWeedsNearWheatFieldsMethod"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasTreatmentMethod"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#ControllingVolunteerCerealsWithinOrNearWheatFieldsMethod"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#hasTreatmentMethod"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#SeedTreatmentsOfImidaclopridOrThiamethoxamMethod"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#WheatIllness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#WheatIllness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#CerealIllness"/>
+        <rdfs:label xml:lang="bg">Болест по пшеницата</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#WhitePowderyGrowthSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#WhitePowderyGrowthSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#YellowDiscolorationSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#YellowDiscolorationSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#AlternariaLinariaeBacteria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#AlternariaLinariaeBacteria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#AlternariaLinariaeBacteria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#AngularLeafSpotIllCucumber -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#AngularLeafSpotIllCucumber">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#AngularLeafSpotIllCucumber"/>
+        <hasIllness rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberAngularLeafSpotIllnessIllness"/>
+        <hasTreatment rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberAngularLeafSpotTreatment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#BarleyYellowDwarfIllWheat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#BarleyYellowDwarfIllWheat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#BarleyYellowDwarfIllWheat"/>
+        <hasIllness rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#WheatBarleyYellowDwarfIlness"/>
+        <hasTreatment rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#WheatBarleyYellowDwarfTreatment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#BarleyYellowDwarfVirus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#BarleyYellowDwarfVirus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#BarleyYellowDwarfVirus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#BeigeColoredCenterSymptom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#BeigeColoredCenterSymptom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#BeigeColoredCenterSymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#BigLesionsOnTheFruitSymptom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#BigLesionsOnTheFruitSymptom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#BigLesionsOnTheFruitSymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#BlackSpecksSporeProducingBodiesSymptom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#BlackSpecksSporeProducingBodiesSymptom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#BlackSpecksSporeProducingBodiesSymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#CentricRingsInBullsEyePatternSymptom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#CentricRingsInBullsEyePatternSymptom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#CentricRingsInBullsEyePatternSymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#ChemicalControlWithFungicideMancozebMethod -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#ChemicalControlWithFungicideMancozebMethod">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#ChemicalControlWithFungicideMancozebMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#ConcentricRingsOnTheFruitSymptom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#ConcentricRingsOnTheFruitSymptom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#ConcentricRingsOnTheFruitSymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#ControllingGrassyWeedsNearWheatFieldsMethod -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#ControllingGrassyWeedsNearWheatFieldsMethod">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#ControllingGrassyWeedsNearWheatFieldsMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#ControllingVolunteerCerealsWithinOrNearWheatFieldsMethod -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#ControllingVolunteerCerealsWithinOrNearWheatFieldsMethod">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#ControllingVolunteerCerealsWithinOrNearWheatFieldsMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#CopperBasedBactericidesMethod -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#CopperBasedBactericidesMethod">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#CopperBasedBactericidesMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberAngularLeafSpotIllnessIllness -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberAngularLeafSpotIllnessIllness">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberAngularLeafSpotIllnessIllness"/>
+        <hasBacteria rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#PseudomonasSyringaePvLachrymansBacteria"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#IrregularlyShapedHolesSymptom"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#LeafSpotsDrySymptom"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallAngularBrownOrStrawColoredSpotsWithYellowHaloSymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberAngularLeafSpotTreatment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberAngularLeafSpotTreatment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberAngularLeafSpotTreatment"/>
+        <hasTreatmentMethod rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#ChemicalControlWithFungicideMancozebMethod"/>
+        <hasTreatmentMethod rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#CopperBasedBactericidesMethod"/>
+        <hasTreatmentMethod rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#DoNotUseOverheadIrrigationMethod"/>
+        <hasTreatmentMethod rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#UseCropRotationMethod"/>
+        <hasRotationTreatmentDurationInMonths rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasRotationTreatmentDurationInMonths>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberPowderyMildewIllness -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberPowderyMildewIllness">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberPowderyMildewIllness"/>
+        <hasBacteria rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#ErisipheCichoracearumBacteria"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#WhitePowderyGrowthSymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberPowderyMildewTreatment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberPowderyMildewTreatment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberPowderyMildewTreatment"/>
+        <hasTreatmentMethod rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#ChemicalControlWithFungicideMancozebMethod"/>
+        <hasTreatmentMethod rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#MilkOrganicMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#DoNotUseOverheadIrrigationMethod -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#DoNotUseOverheadIrrigationMethod">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#DoNotUseOverheadIrrigationMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#EarlyBlightIllTomato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#EarlyBlightIllTomato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#EarlyBlightIllTomato"/>
+        <hasIllness rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoEarlyBlightIllness"/>
+        <hasTreatment rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoEarlyBlightTreatment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#ErisipheCichoracearumBacteria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#ErisipheCichoracearumBacteria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#ErisipheCichoracearumBacteria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#FruitDropsSymptom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#FruitDropsSymptom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#FruitDropsSymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#IrregularlyShapedHolesSymptom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#IrregularlyShapedHolesSymptom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#IrregularlyShapedHolesSymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#LeafSpotsDrySymptom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#LeafSpotsDrySymptom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#LeafSpotsDrySymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#MilkOrganicMethod -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#MilkOrganicMethod">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#MilkOrganicMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#PodosphaeraXanthiiBacteria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#PodosphaeraXanthiiBacteria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#PodosphaeraXanthiiBacteria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#PowderyMildewIllCucumber -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#PowderyMildewIllCucumber">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#PowderyMildewIllCucumber"/>
+        <hasIllness rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberPowderyMildewIllness"/>
+        <hasTreatment rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberPowderyMildewTreatment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#PseudomonasSyringaePvLachrymansBacteria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#PseudomonasSyringaePvLachrymansBacteria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#PseudomonasSyringaePvLachrymansBacteria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#PurpleОrPinkDiscolorationSymptom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#PurpleОrPinkDiscolorationSymptom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#PurpleОrPinkDiscolorationSymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#RepeatedFungicideApplicationsWithChlorothalonilMethod -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#RepeatedFungicideApplicationsWithChlorothalonilMethod">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#RepeatedFungicideApplicationsWithChlorothalonilMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#SanitationRremovalOfCropDebrisMethod -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#SanitationRremovalOfCropDebrisMethod">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#SanitationRremovalOfCropDebrisMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#SeedTreatmentsOfImidaclopridOrThiamethoxamMethod -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#SeedTreatmentsOfImidaclopridOrThiamethoxamMethod">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#SeedTreatmentsOfImidaclopridOrThiamethoxamMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#SeptoriaLeafSpotIllTomato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#SeptoriaLeafSpotIllTomato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#SeptoriaLeafSpotIllTomato"/>
+        <hasIllness rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoSeptoriaLeafSpotIllnessIllness"/>
+        <hasTreatment rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoSeptoriaLeafSpotTreatment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#SeptoriaLycopersiciBacteria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#SeptoriaLycopersiciBacteria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#SeptoriaLycopersiciBacteria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallAngularBrownOrStrawColoredSpotsWithYellowHaloSymptom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallAngularBrownOrStrawColoredSpotsWithYellowHaloSymptom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallAngularBrownOrStrawColoredSpotsWithYellowHaloSymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallBrownLesionsMostlyOnTheOlderFoliageSymptom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallBrownLesionsMostlyOnTheOlderFoliageSymptom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallBrownLesionsMostlyOnTheOlderFoliageSymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallCircularSpotsWithDarkBordersSymptom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallCircularSpotsWithDarkBordersSymptom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallCircularSpotsWithDarkBordersSymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallPatchesSymptom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallPatchesSymptom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallPatchesSymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoEarlyBlightIllness -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoEarlyBlightIllness">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoEarlyBlightIllness"/>
+        <hasBacteria rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#AlternariaLinariaeBacteria"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#BigLesionsOnTheFruitSymptom"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#CentricRingsInBullsEyePatternSymptom"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#ConcentricRingsOnTheFruitSymptom"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#FruitDropsSymptom"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallBrownLesionsMostlyOnTheOlderFoliageSymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoEarlyBlightTreatment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoEarlyBlightTreatment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoEarlyBlightTreatment"/>
+        <hasTreatmentMethod rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#ChemicalControlWithFungicideMancozebMethod"/>
+        <hasTreatmentMethod rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TrimOffDisposeInfectedLowerBranchesAndLeavesMethod"/>
+        <hasTreatmentMethod rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#UseCropRotationMethod"/>
+        <hasTreatmentMethod rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#UsePathogenFreeSeedMethod"/>
+        <hasTreatmentMethod rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#UseResistantTolerantCultivarsMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoSeptoriaLeafSpotIllnessIllness -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoSeptoriaLeafSpotIllnessIllness">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoSeptoriaLeafSpotIllnessIllness"/>
+        <hasBacteria rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#SeptoriaLycopersiciBacteria"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#BeigeColoredCenterSymptom"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#BlackSpecksSporeProducingBodiesSymptom"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallCircularSpotsWithDarkBordersSymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoSeptoriaLeafSpotTreatment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoSeptoriaLeafSpotTreatment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoSeptoriaLeafSpotTreatment"/>
+        <hasTreatmentMethod rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#DoNotUseOverheadIrrigationMethod"/>
+        <hasTreatmentMethod rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#RepeatedFungicideApplicationsWithChlorothalonilMethod"/>
+        <hasTreatmentMethod rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#SanitationRremovalOfCropDebrisMethod"/>
+        <hasTreatmentMethod rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#UseCropRotationMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#TrimOffDisposeInfectedLowerBranchesAndLeavesMethod -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#TrimOffDisposeInfectedLowerBranchesAndLeavesMethod">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#TrimOffDisposeInfectedLowerBranchesAndLeavesMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#UseCropRotationMethod -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#UseCropRotationMethod">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#UseCropRotationMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#UsePathogenFreeSeedMethod -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#UsePathogenFreeSeedMethod">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#UsePathogenFreeSeedMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#UseResistantTolerantCultivarsMethod -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#UseResistantTolerantCultivarsMethod">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#UseResistantTolerantCultivarsMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#WheatBarleyYellowDwarfIlness -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#WheatBarleyYellowDwarfIlness">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#WheatBarleyYellowDwarfIlness"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#PurpleОrPinkDiscolorationSymptom"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallPatchesSymptom"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#YellowDiscolorationSymptom"/>
+        <hasVirus rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#BarleyYellowDwarfVirus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#WheatBarleyYellowDwarfTreatment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#WheatBarleyYellowDwarfTreatment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#WheatBarleyYellowDwarfTreatment"/>
+        <hasTreatmentMethod rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#ControllingGrassyWeedsNearWheatFieldsMethod"/>
+        <hasTreatmentMethod rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#ControllingVolunteerCerealsWithinOrNearWheatFieldsMethod"/>
+        <hasTreatmentMethod rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#SeedTreatmentsOfImidaclopridOrThiamethoxamMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#WhitePowderyGrowthSymptom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#WhitePowderyGrowthSymptom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#WhitePowderyGrowthSymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/5/farm#YellowDiscolorationSymptom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#YellowDiscolorationSymptom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/5/farm#YellowDiscolorationSymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#AngularLeafSpotIllCucumber">
+        <rdfs:label xml:lang="bg">Краставица, болна от Ъглова петнистост на листата</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#BarleyYellowDwarfIllWheat">
+        <rdfs:label xml:lang="bg">Болна пшеница от Ечемичено Жълто Джудже</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#BarleyYellowDwarfVirus">
+        <rdfs:label xml:lang="bg">Вирус на жълтата мъждожитна ръжда</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#BeigeColoredCenterSymptom">
+        <rdfs:label xml:lang="bg">Симптом на бежов център</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#BigLesionsOnTheFruitSymptom">
+        <rdfs:label xml:lang="bg">Големи лезии на плодовете - симптом</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#BlackSpecksSporeProducingBodiesSymptom">
+        <rdfs:label xml:lang="bg">Симптом на черни точки, произвеждащи спори</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#CentricRingsInBullsEyePatternSymptom">
+        <rdfs:label xml:lang="bg">Симптом на централни пръстени</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#ChemicalControlWithFungicideMancozebMethod">
+        <rdfs:label xml:lang="bg">Химичен контрол с фунгицид Манкозеб</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#ConcentricRingsOnTheFruitSymptom">
+        <rdfs:label xml:lang="bg">Концентрични пръстени върху плода</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#ControllingGrassyWeedsNearWheatFieldsMethod">
+        <rdfs:label xml:lang="bg">Контрол на тревните вредители в или около полетата с пшеница</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#ControllingVolunteerCerealsWithinOrNearWheatFieldsMethod">
+        <rdfs:label xml:lang="bg">Контрол на зърнени култури в или около полетата с пшеница</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#CopperBasedBactericidesMethod">
+        <rdfs:label xml:lang="bg">Бактерициден метод на медна основа</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberAngularLeafSpotIllnessIllness">
+        <rdfs:label xml:lang="bg">Болест- Ъглова петнистост на краставиците</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberAngularLeafSpotTreatment">
+        <rdfs:label xml:lang="bg">Терапия/Лечение на ъглова петнистост на краставиците</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberPowderyMildewIllness">
+        <rdfs:label xml:lang="bg">Болест- Праховита плесен на краставиците</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#CucumberPowderyMildewTreatment">
+        <rdfs:label xml:lang="bg">Терапия/Лечение на праховита плесен на краставиците</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#DoNotUseOverheadIrrigationMethod">
+        <rdfs:label xml:lang="bg">Не използвайте надглавно напояване</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#EarlyBlightIllTomato">
+        <rdfs:label xml:lang="bg">Домат, болен от ранна мана</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#FruitDropsSymptom">
+        <rdfs:label xml:lang="bg">Симптом на падащи плодове</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#IrregularlyShapedHolesSymptom">
+        <rdfs:label xml:lang="bg">Симптом на неправилно оформени отвори</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#LeafSpotsDrySymptom">
+        <rdfs:label xml:lang="bg">Симптом на петна от изсушени части  на листата</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#MilkOrganicMethod">
+        <rdfs:label xml:lang="bg">Органичен метод на лечение чрез мляко</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#PowderyMildewIllCucumber">
+        <rdfs:label xml:lang="bg">Краставица, болна от Праховита плесен</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#PurpleОrPinkDiscolorationSymptom">
+        <rdfs:label xml:lang="bg">Симптом на лилаво или розово обезцветяване</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#RepeatedFungicideApplicationsWithChlorothalonilMethod">
+        <rdfs:label xml:lang="bg">Повтарящи се приложения на фунгициди с Хлороталонил</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#SanitationRremovalOfCropDebrisMethod">
+        <rdfs:label xml:lang="bg">Метод за санитарно премахване на растителни отпадъци</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#SeedTreatmentsOfImidaclopridOrThiamethoxamMethod">
+        <rdfs:label xml:lang="bg">Обработки на семената с Имидаклоприд или Тиаметоксам</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#SeptoriaLeafSpotIllTomato">
+        <rdfs:label xml:lang="bg">Домат, болен от Петниста листна плесен</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallAngularBrownOrStrawColoredSpotsWithYellowHaloSymptom">
+        <rdfs:label xml:lang="bg">Симптом на малки ъглови кафяви или сламено-цветни петна с жълт хало</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallBrownLesionsMostlyOnTheOlderFoliageSymptom">
+        <rdfs:label xml:lang="bg">Симптом на малки кафяви лезии, най-често на по-старите листа</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallCircularSpotsWithDarkBordersSymptom">
+        <rdfs:label xml:lang="bg">Симптом на малки кръгли петна с тъмни граници</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallPatchesSymptom">
+        <rdfs:label xml:lang="bg">Симптом на малки петна</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoEarlyBlightIllness">
+        <rdfs:label xml:lang="bg">Болест- ранна петнистост на доматите</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoEarlyBlightTreatment">
+        <rdfs:label xml:lang="bg">Терапия/Лечение на ранната петнистост на доматите</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoSeptoriaLeafSpotIllnessIllness">
+        <rdfs:label xml:lang="bg">Болест-  петнистост на листата на доматите, причинена от Septoria</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#TomatoSeptoriaLeafSpotTreatment">
+        <rdfs:label xml:lang="bg">Терапия/Третиране на петнистостта на листата на доматите, причинена от Septoria</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#TrimOffDisposeInfectedLowerBranchesAndLeavesMethod">
+        <rdfs:label xml:lang="bg">Метод за отрязване и изхвърляне на заразени долни клони и листа</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#UseCropRotationMethod">
+        <rdfs:label xml:lang="bg">Метод на ротация на културите</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#UsePathogenFreeSeedMethod">
+        <rdfs:label xml:lang="bg">Метод на използване на семена без патогенни организми</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#UseResistantTolerantCultivarsMethod">
+        <rdfs:label xml:lang="bg">Метод на използване на сортове растения, устойчиви или толерантни към заболявания</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#WheatBarleyYellowDwarfIlness">
+        <rdfs:label xml:lang="bg">Жълта гнездова болест на пшеницата и ечемика</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#WheatBarleyYellowDwarfTreatment">
+        <rdfs:label xml:lang="bg">Терапия/Лечение на жълта гнездова болест на пшеницата и ечемика</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#WhitePowderyGrowthSymptom">
+        <rdfs:label xml:lang="bg">Симптом на бял пухкав растеж</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#YellowDiscolorationSymptom">
+        <rdfs:label xml:lang="bg">Симптом на жълто обезцветяване</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#BeigeColoredCenterSymptom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#BigLesionsOnTheFruitSymptom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#BlackSpecksSporeProducingBodiesSymptom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#CentricRingsInBullsEyePatternSymptom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#ConcentricRingsOnTheFruitSymptom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#FruitDropsSymptom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#IrregularlyShapedHolesSymptom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#LeafSpotsDrySymptom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#PurpleОrPinkDiscolorationSymptom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallAngularBrownOrStrawColoredSpotsWithYellowHaloSymptom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallBrownLesionsMostlyOnTheOlderFoliageSymptom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallCircularSpotsWithDarkBordersSymptom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#SmallPatchesSymptom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#WhitePowderyGrowthSymptom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#YellowDiscolorationSymptom"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#ChemicalControlWithFungicideMancozebMethod"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#ControllingGrassyWeedsNearWheatFieldsMethod"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#ControllingVolunteerCerealsWithinOrNearWheatFieldsMethod"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#CopperBasedBactericidesMethod"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#DoNotUseOverheadIrrigationMethod"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#MilkOrganicMethod"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#RepeatedFungicideApplicationsWithChlorothalonilMethod"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#SanitationRremovalOfCropDebrisMethod"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#SeedTreatmentsOfImidaclopridOrThiamethoxamMethod"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#TrimOffDisposeInfectedLowerBranchesAndLeavesMethod"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#UseCropRotationMethod"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#UsePathogenFreeSeedMethod"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#UseResistantTolerantCultivarsMethod"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#IllCrop"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#Illness"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#Pathogen"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#Symptom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#Treatment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/5/farm#TreatmentMethod"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,62 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="1.8-create-plant-sort-table" author="Maria Pavlova">
+
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="sort"/>
+            </not>
+        </preConditions>
+
+        <comment>Create sort table if it doesn't exist.</comment>
+
+        <createTable tableName="sort">
+
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="sort_pkey"/>
+            </column>
+
+            <column name="name" type="VARCHAR(500)"/>
+            <column name="description" type="VARCHAR(1000)"/>
+
+            <column name="plant_id" type="BIGINT">
+                <constraints nullable="false" foreignKeyName="plant_fk"
+                             references="plant(id)"/>
+            </column>
+
+            <column name="is_deleted" type="boolean" defaultValueBoolean="false"/>
+        </createTable>
+
+    </changeSet>
+
+    <changeSet id="create season_phase_sort table" author="Maria Pavlova">
+
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="season_phase_sort"/>
+            </not>
+        </preConditions>
+
+        <comment>Create season_phase_sort table if it doesn't exist.</comment>
+
+        <createTable tableName="season_phase_sort">
+
+            <column name="season_phase_id" type="BIGINT">
+                <constraints nullable="false" foreignKeyName="season_phase_fk"
+                             references="season_phase(id)"/>
+            </column>
+
+            <column name="sort_id" type="BIGINT">
+                <constraints nullable="false" foreignKeyName="sort_fk"
+                             references="sort(id)"/>
+            </column>
+
+        </createTable>
+
+    </changeSet>
+</databaseChangeLog>

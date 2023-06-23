@@ -1,0 +1,31 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="1.3-create-season-phase-table" author="Maria Pavlova">
+
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="season_phase"/>
+            </not>
+        </preConditions>
+
+        <comment>Create season_phase table if it doesn't exist.</comment>
+
+        <createTable tableName="season_phase">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="season_phase_pkey"/>
+            </column>
+            <column name="phase_name" type="VARCHAR(50)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="phase_name_unique"/>
+            </column>
+            <column name="description" type="VARCHAR(150)"/>
+            <column name="season_start_date" type="date"/>
+            <column name="season_end_date" type="date"/>
+        </createTable>
+
+    </changeSet>
+</databaseChangeLog>
